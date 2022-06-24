@@ -7,11 +7,17 @@ li {
   list-style: none;
 }
 
-nav {
+.nav__container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 20vh;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 10px;
+  background-color: beige;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .nav__title {

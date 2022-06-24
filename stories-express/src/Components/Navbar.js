@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import useFetch from "../Hooks/useFetch";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState("nav__menu");
@@ -17,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav__container">
       <button className="nav__title">STORIES EXPRESS</button>
       <ul className={navActive}>
         <li className="nav__item">

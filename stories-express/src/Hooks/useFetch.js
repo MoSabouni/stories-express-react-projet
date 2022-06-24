@@ -7,15 +7,16 @@ function useFetch(url) {
 
   useEffect(() => {
     setLoading(true);
-    console.log("fetching is under going");
+    console.log("fetching...");
     fetch(url)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((error) => {
         setError(error);
+        console.log(error);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [url]);
 
   return [data, loading, error];
 }
