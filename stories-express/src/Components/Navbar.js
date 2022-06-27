@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Navbar.css";
+import { NewsContext } from "../Context/NewsContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("nav__toggler");
+  const [data] = useContext(NewsContext);
+  console.log(data);
 
   const navToggle = () => {
     navActive === "nav__menu"
@@ -21,6 +25,12 @@ const Navbar = () => {
       <ul className={navActive}>
         <li className="nav__item">
           <button className="nav__btn">Home</button>
+        </li>
+        <li className="nav__item">
+          <Link to={`/test`}>
+            {" "}
+            <button className="nav__btn">TEST</button>
+          </Link>
         </li>
         <li className="nav__item">
           <button className="nav__btn">Politics</button>
