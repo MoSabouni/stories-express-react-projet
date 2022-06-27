@@ -1,5 +1,4 @@
 import React, { useState, createContext } from "react";
-import useFetch from "../Hooks/useFetch";
 
 export const NewsContext = createContext();
 

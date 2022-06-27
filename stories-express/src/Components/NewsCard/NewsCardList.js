@@ -14,17 +14,16 @@ const NewsCardList = () => {
     setNewsData(data.results);
   }, [data]);
 
-  if (loading) return <div> Loading products... </div>;
+  if (loading) return <div> Loading news... </div>;
 
-  if (error) return <div>Error loading products : {error}</div>;
-  // const articles = data.results;
+  if (error) return <div>Error loading news : {error}</div>;
 
   if (newsData) {
     return (
       <div className="news-card-list__container">
         <div>
-          {newsData.map((article) => {
-            return <NewsCard article={article} />;
+          {newsData.map((article, index) => {
+            return <NewsCard key={index} article={article} />;
           })}
         </div>
       </div>
