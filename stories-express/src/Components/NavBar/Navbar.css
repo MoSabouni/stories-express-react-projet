@@ -63,16 +63,16 @@ li {
   }
   .nav__menu {
     position: fixed;
-    top: 170px;
+    top: 200px;
     right: 0;
     width: 36%;
     height: 80vh;
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
-    background-color: antiquewhite;
+    background-color: #2d3142;
     border-radius: 20px;
-    padding-top: 20%;
+    padding-top: 20px;
   }
 }
 
