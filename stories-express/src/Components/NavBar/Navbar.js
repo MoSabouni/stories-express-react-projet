@@ -22,11 +22,12 @@ const Navbar = () => {
       setNewsCategories(categoriesData);
     }
   }, [newsData]);
-  console.log(newsCategories);
 
   return (
     <nav className="nav__container">
-      <button className="nav__title">STORIES EXPRESS</button>
+      <button className="nav__title">
+        STORIES E<span className="x-letter">X</span>PRESS
+      </button>
       <ul className={navActive}>
         <li className="nav__item">
           <Link to={`/`}>
@@ -34,10 +35,10 @@ const Navbar = () => {
           </Link>
         </li>
         {newsCategories.map((category, index) => {
-          return <NavBarCategory key={index} categorey={category} />;
+          return <NavBarCategory key={index} category={category} />;
         })}
       </ul>
-      <NavbarButton setNavActive={(navActive, setNavActive)} />
+      <NavbarButton navActive={navActive} setNavActive={setNavActive} />
     </nav>
   );
 };

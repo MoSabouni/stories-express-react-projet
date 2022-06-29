@@ -3,4 +3,21 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #2d3142;
+}
+.home-page__container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+a {
+  all: unset;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-page__container {
+    flex-direction: column;
+  }
 }

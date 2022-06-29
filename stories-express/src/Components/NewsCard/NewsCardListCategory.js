@@ -1,21 +1,18 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import NewsCard from "./NewsCard";
-import useFetch from "../../Hooks/useFetch";
-import "./NewsCardList.css";
 import { NewsContext } from "../../Context/NewsContext";
 
 const NewsCardListCategory = ({ category }) => {
   const [newsData] = useContext(NewsContext);
-  // console.log(data);
   const newsDataFiltered = newsData.filter(
     (article) => article.section === category
   );
 
   return (
-    <div className="news-card-list__container">
+    <div>
       <div>
-        {newsDataFiltered.map((article) => {
-          return <NewsCard article={article} />;
+        {newsDataFiltered.map((article, index) => {
+          return <NewsCard key={index} article={article} />;
         })}
       </div>
     </div>

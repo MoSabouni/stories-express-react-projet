@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/NavBar/Navbar";
 import NewsCardListCategory from "../Components/NewsCard/NewsCardListCategory";
+import "./CategoryPage.css";
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -9,7 +10,9 @@ const CategoryPage = () => {
   return (
     <div className="App">
       <Navbar />
-      <NewsCardListCategory category={category} />
+      <div className="category-page__container">
+        <NewsCardListCategory category={category} />
+      </div>
     </div>
   );
 };

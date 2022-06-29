@@ -1,4 +1,5 @@
 const keyExistCheck = (obj, key) => {
+  // Helper function to check if a key exist in a nested object, source : "https://javascript.plainenglish.io/how-to-test-for-existence-of-nested-javascript-object-key-4bc56a96086f"
   if (!obj || (typeof obj !== "object" && !Array.isArray(obj))) {
     return false;
   } else if (obj.hasOwnProperty(key)) {
