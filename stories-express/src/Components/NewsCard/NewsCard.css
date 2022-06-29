@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  width: 100%;
 }
 .news-card__title {
   background-color: #fca311;
